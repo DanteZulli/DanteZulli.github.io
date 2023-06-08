@@ -1,0 +1,93 @@
+/************* FORM WRAPPPER ******************/
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-row: 1fr;
+  padding: 20px;
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.form-wrapper > h1 {
+  grid-column: 1/4;
+  text-align: left;
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: normal;
+}
+
+.birth-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.mailbox {
+  width: 80%;
+}
+.cel,.tel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.cel> input {
+  width: 80%;
+}
+.tel > input {
+  width: 80%;
+}
+
+.polytics {
+  display: flex;
+}
+.radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.street {
+  grid-column: 2/4;
+}
+.district {
+  grid-column: 2/4;
+}
+.cel-insp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  grid-column: 1/3;
+}
+.cel-insp> input {
+  width: 30%;
+}
+.cel-insp > .mailbox {
+  width: 100%;
+}
+
+.legend-text {
+  grid-column: 1;
+  font-size: 0.8rem;
+  color: var(--gray-for-text);
+}
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--white);
+  padding: 20px;
+  padding-top: 0;
+}
+.center-button {
+  padding: 5px;
+}

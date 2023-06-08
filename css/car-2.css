@@ -1,0 +1,248 @@
+/**** PROGRESS CIRCLES ******/
+.circle-checked {
+  background-color: var(--blue);
+  opacity: 60%;
+}
+
+/****** CARDS *************/
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--white);
+}
+/************ RESUME CARD***************/
+.resume {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+.resume-card {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: var(--white);
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.fa-car, .check{
+  font-size: 30px;
+  color: var(--blue);
+}
+
+/**************COST CARDS****************/
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+.cost {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--blue);
+  color: var(--white);
+  padding-bottom: 0px;
+}
+.cost-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 140px 0 140px;
+  border-color: var(--blue) transparent transparent transparent;
+}
+.card-left,
+.card-right {
+  border: 2px var(--blue) solid;
+}
+.card-middle {
+  border: 2px var(--green) solid;
+}
+.middle-cost {
+  background-color: var(--green);
+}
+
+.coverage-scope {
+  display: flex;
+  font-size: 13px;
+  padding: 20px;
+}
+.coverage-scope li {
+  list-style: none;
+  padding: 0;
+  margin-left: -10px;
+}
+li .fa-check {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 15px;
+}
+li .fa-circle-info {
+  color: var(--gray);
+}
+.coverage-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+.more {
+  background-color: #ffffff;
+  border: 2px #d3d3d3 solid;
+  color: var(--gray-for-text);
+  border-radius: 2px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.more:hover {
+    background-color: var(--gray);
+    cursor: pointer;
+    color: var(--white);
+  }
+.buy {
+  background-color: var(--blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  min-width: 230px;
+  align-self: center;
+  font-size: 20px;
+}
+.buy:hover {
+  background-color: var(--gray);
+  cursor: pointer;
+  color: var(--white);
+}
+
+.cost-triangle-middle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 150px 0 150px;
+  border-color: var(--green) transparent transparent transparent;
+}
+.coverage-scope-middle {
+  display: flex;
+  font-size: 13px;
+  padding: 20px;
+  overflow-y: scroll;
+  max-height: 80px;
+}
+.coverage-scope-middle li {
+  list-style: none;
+  padding: 0;
+  margin-left: -10px;
+}
+
+/************* BUTTONS **********************/
+.bottom-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.bottom-button {
+    border: 2px #d3d3d3 solid;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--gray);
+    color: var(--white);
+}
+.bottom-button:hover {
+  background-color: var(--white);
+  cursor: pointer;
+  color: var(--gray);
+}
+
+/*****************POPUP**********************/
+#blur.active {
+    filter:blur(5px);
+    pointer-events: none;
+}
+.blur {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.popup {
+    width: 500px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    box-shadow: 2px 20px 20px black;
+}
+.open-popup{
+    visibility: visible;
+    top: 40%;
+    transform: translate(-50%,-50%)scale(1);
+}
+.coverage-scope-popup {
+    display: flex;
+    font-size: 13px;
+    padding: 30px;
+    padding-bottom: 5px;
+    gap: 5px;
+}
+.cost-triangle-popup {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 250px 0 250px;
+    border-color: var(--green) transparent transparent transparent;
+  }
+.coverage-info-icons {
+    display: flex;
+    flex-direction: column;
+    gap:5.7px;
+}
+.coverage-info-icons i {
+    color: var(--gray);
+}
+.coverage-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.legend {
+    padding: 30px;
+    padding-top: 0px;
+}
+.close {
+    background-color: var(--green);
+    border: none;
+    color: #ffffff;
+    display: flex;    
+    border-radius: 50%;
+}
+.close:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/**************** TEXT RULES ¨********************/
+.small-text {
+  font-size: 12px;
+}
+.medium-text {
+  font-size: 15px;
+}
+.big-text {
+  font-size: 25px;
+}
