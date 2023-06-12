@@ -10,7 +10,7 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background-color: var(--white);
+  background-color: #ebebeb;
 }
 /************ RESUME CARD***************/
 .resume {
@@ -18,25 +18,46 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 .resume-card {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  background-color: var(--white);
+  gap: 25px;
+  background-color: #f2f2f2;
   border: 1px solid #d3d3d3;
-  border-radius: 3px;
-  padding: 20px;
-  font-size: 12px;
+  border-radius: 5px;
+  padding: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 11px;
+  font-weight: 400;
+}
+.resume-title {
+  font-weight: 600;
 }
 
-.fa-car, .check{
+.fa-car,
+.check {
   font-size: 30px;
   color: var(--blue);
 }
 
 /**************COST CARDS****************/
+.red-line {
+  position: relative;
+}
+.red-line:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: inherit;
+  color: red;
+  transform: rotate(-7deg);
+}
 .cards {
   display: flex;
   flex-direction: row;
@@ -44,12 +65,12 @@
   align-items: center;
 }
 .card {
-  border-radius: 7px;
+  border-radius: 5px;
   background-color: #ffffff;
 }
 .cost {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background-color: var(--blue);
   color: var(--white);
   padding-bottom: 0px;
@@ -61,9 +82,15 @@
   border-width: 20px 140px 0 140px;
   border-color: var(--blue) transparent transparent transparent;
 }
-.card-left,
+.card-left {
+  border: 2px var(--blue) solid;
+  border-right: none;
+  border-bottom-right-radius: 0px;
+}
 .card-right {
   border: 2px var(--blue) solid;
+  border-left: none;
+  border-bottom-left-radius: 0px;
 }
 .card-middle {
   border: 2px var(--green) solid;
@@ -76,6 +103,23 @@
   display: flex;
   font-size: 13px;
   padding: 20px;
+}
+.coverage-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+.coverage-list-middle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: scroll;
+  max-height: 120px;
+  list-style-position: inside;
 }
 .coverage-scope li {
   list-style: none;
@@ -96,27 +140,28 @@ li .fa-circle-info {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 20px;
+  padding: 15px;
+  padding-top: 0px;
 }
 .more {
   background-color: #ffffff;
   border: 2px #d3d3d3 solid;
   color: var(--gray-for-text);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
 }
 .more:hover {
-    background-color: var(--gray);
-    cursor: pointer;
-    color: var(--white);
-  }
+  background-color: var(--gray);
+  cursor: pointer;
+  color: var(--white);
+}
 .buy {
   background-color: var(--blue);
   color: #ffffff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px;
   min-width: 230px;
   align-self: center;
@@ -136,11 +181,8 @@ li .fa-circle-info {
   border-color: var(--green) transparent transparent transparent;
 }
 .coverage-scope-middle {
-  display: flex;
   font-size: 13px;
   padding: 20px;
-  overflow-y: scroll;
-  max-height: 80px;
 }
 .coverage-scope-middle li {
   list-style: none;
@@ -150,17 +192,18 @@ li .fa-circle-info {
 
 /************* BUTTONS **********************/
 .bottom-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .bottom-button {
-    border: 2px #d3d3d3 solid;
-    border-radius: 4px;
-    padding: 8px;
-    background-color: var(--gray);
-    color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  width: 120px;
+  background-color: #a6a7a8;
+  color: var(--white);
 }
 .bottom-button:hover {
   background-color: var(--white);
@@ -170,79 +213,132 @@ li .fa-circle-info {
 
 /*****************POPUP**********************/
 #blur.active {
-    filter:blur(5px);
-    pointer-events: none;
+  pointer-events: none;
+  visibility: visible;
 }
-.blur {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+.blur{
+  position:fixed;
+  z-index:999;
+  width:100%;
+  height:100%;
+  background-color: black;
+  background-color:rgba(0,0,0,.40);
+  visibility: hidden;
 }
 .popup {
-    width: 500px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%)scale(0.1);
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-    box-shadow: 2px 20px 20px black;
+  width: 420px;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
 }
-.open-popup{
-    visibility: visible;
-    top: 40%;
-    transform: translate(-50%,-50%)scale(1);
+.open-popup {
+  visibility: visible;
+  top: 40%;
+  transform: translate(-50%, -50%) scale(1);
 }
 .coverage-scope-popup {
-    display: flex;
-    font-size: 13px;
-    padding: 30px;
-    padding-bottom: 5px;
-    gap: 5px;
+  display: flex;
+  font-size: 13px;
+  padding: 30px;
+  padding-bottom: 5px;
+  gap: 5px;
+}
+.coverage-text > hr {
+  border: 1px solid #eeeeee;
 }
 .cost-triangle-popup {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 25px 250px 0 250px;
-    border-color: var(--green) transparent transparent transparent;
-  }
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 210px 0 210px;
+  border-color: var(--green) transparent transparent transparent;
+}
 .coverage-info-icons {
-    display: flex;
-    flex-direction: column;
-    gap:5.7px;
+  display: flex;
+  flex-direction: column;
+  gap: 5.7px;
 }
 .coverage-info-icons i {
-    color: var(--gray);
+  color: var(--gray);
 }
 .coverage-text {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .legend {
-    padding: 30px;
-    padding-top: 0px;
+  padding: 30px;
+  padding-top: 0px;
 }
 .close {
-    background-color: var(--green);
-    border: none;
-    color: #ffffff;
-    display: flex;    
-    border-radius: 50%;
+  background-color: var(--green);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  border-radius: 50%;
 }
 .close:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.middle-cost-popup {
+  background-color: var(--green);
+  border: 5px solid var(--green);
+  margin-top: 0px;
+}
+.cost-popup {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  background-color: var(--green);
+  color: var(--white);
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;  
+  margin: 10px;
+}
+.coverage-buttons-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  padding-top: 0px;
+}
+.buy-popup {
+  background-color: var(--blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 170px;
+  align-self: center;
+  font-size: 20px;
+}
+.buy-popup:hover {
+  background-color: var(--gray);
+  cursor: pointer;
+  color: var(--white);
 }
 /**************** TEXT RULES ¨********************/
 .small-text {
   font-size: 12px;
+  font-weight: 400;
 }
 .medium-text {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .big-text {
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 600;
 }

@@ -17,16 +17,16 @@
     <link type="text/css" rel="stylesheet" href="css/car.css" />
     <link type="text/css" rel="stylesheet" href="css/car-2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <title>Cotizador - Provincia Seguros</title>
   </head>
   <body>
-    <div id="blur" class="blur">
+    <div class="blur" id="blur"></div>
+    <div>
       <header>
         <nav class="top-nav">
           <container class="container-left">
@@ -47,7 +47,7 @@
           <div class="progress">
             <div class="heading">
               <h1>Cotización</h1>
-              <h2>Elegí un plan a tu medida - Uso particular</h2>
+              <p>Elegí un plan a tu medida - Uso particular</p>
             </div>
             <div class="progress-circles">
               <div class="container-circle">
@@ -84,9 +84,7 @@
           <container class="resume">
             <div class="resume-card">
               <i class="fas fa-car"></i>
-              <p>
-                <b>DATOS DEL <br />VEHÍCULO</b>
-              </p>
+              <p class="resume-title">DATOS DEL <br />VEHÍCULO</p>
               <p>
                 FIORINO FURGON FIRE CONFORT año:2010<br />
                 Cotización Nro:86471769<br />
@@ -99,21 +97,19 @@
           <container class="cards">
             <container class="card-left card">
               <div class="cost left-cost">
-                <p class="medium-text">
-                  <b>$<del>25827</del></b
+                <p class="small-text">
+                  $ <span class="red-line medium-text">25827</span
                   ><a class="small-text">/MES</a>
                 </p>
                 <br />
-                <p class="medium-text">Precio promocional</p>
-                <p class="big-text">
-                  <b>$21118</b><a class="medium-text">/MES</a>
-                </p>
-                <p class="medium-text">TERCEROS</p>
+                <p class="small-text">Precio promocional</p>
+                <p class="big-text">$21118<a class="medium-text">/MES</a></p>
+                <p class="small-text">TERCEROS</p>
                 <p class="small-text">Ahorro</p>
               </div>
               <div class="cost-triangle"></div>
               <div class="coverage-scope">
-                <ul>
+                <ul class="coverage-list">
                   <li>
                     <i class="fa-solid fa-check"></i>
                     Robo Hurto/Incendio Total
@@ -138,21 +134,19 @@
             </container>
             <container class="card-middle card">
               <div class="cost middle-cost">
-                <p class="medium-text">
-                  <b>$<del>30321</del></b
+                <p class="small-text">
+                  $ <span class="red-line medium-text">30321</span
                   ><a class="small-text">/MES</a>
                 </p>
                 <br />
-                <p class="medium-text">Precio promocional</p>
-                <p class="big-text">
-                  <b>$24739</b><a class="medium-text">/MES</a>
-                </p>
-                <p class="medium-text">TERCEROS</p>
+                <p class="small-text">Precio promocional</p>
+                <p class="big-text">$24739<a class="medium-text">/MES</a></p>
+                <p class="small-text">TERCEROS</p>
                 <p class="small-text">Completo</p>
               </div>
               <div class="cost-triangle-middle"></div>
               <div class="coverage-scope-middle">
-                <ul>
+                <ul class="coverage-list-middle">
                   <li>
                     <i class="fa-solid fa-check"></i>
                     Robo/Inc Parcial S/Fcia.
@@ -207,21 +201,19 @@
             </container>
             <container class="card-right card">
               <div class="cost right-cost">
-                <p class="medium-text">
-                  <b>$<del>25275</del></b
-                  ><a class="small-text">/MES</a>
+                <p class="small-text">
+                  $ <span class="red-line medium-text">25275</span>
+                  <a class="small-text">/MES</a>
                 </p>
                 <br />
-                <p class="medium-text">Precio promocional</p>
-                <p class="big-text">
-                  <b>$20667</b><a class="medium-text">/MES</a>
-                </p>
-                <p class="medium-text">TERCEROS</p>
+                <p class="small-text">Precio promocional</p>
+                <p class="big-text">$20667<a class="medium-text">/MES</a></p>
+                <p class="small-text">TERCEROS</p>
                 <p class="small-text">Básico</p>
               </div>
               <div class="cost-triangle"></div>
               <div class="coverage-scope">
-                <ul>
+                <ul class="coverage-list">
                   <li>
                     <i class="fa-solid fa-check"></i>
                     Responsabilidad Civil
@@ -246,7 +238,9 @@
             </container>
           </container>
           <containter class="bottom-buttons">
-            <button class="bottom-button" onclick="history.back()">ANTERIOR</button>
+            <button class="bottom-button" onclick="history.back()">
+              ANTERIOR
+            </button>
             <button class="bottom-button">COTIZACIÓN PDF</button>
             <button class="bottom-button">CONTACTAME</button>
           </containter>
@@ -258,11 +252,11 @@
         <container class="terms">
           <a class="terms-link">VER TÉRMINOS Y CONDICIONES</a>
           <p class="terms-text">
-            PÓLIZAS EMITIDAS POR EMPRESA GENÉRICA. CONSULTÁ POR LAS
-            COBERTURAS, SUS LÍMITES Y CONDICIONES DE SUSCRIPCIÓN EN
-            WWW.EMPRESAGENERICA.COM EMPRESA GENÉRICA. CALLE FALSA 123, SPRINGIELD MASSACHUSETTS, CUIT 22-555555555-2 SUPERINTENDENCIA DE
-            SEGUROS DE LA NACIÓN WWW.SSN.GOB.AR -0800-666-8400 - N° DE
-            INSCRIPCIÓN SSN: 123
+            PÓLIZAS EMITIDAS POR EMPRESA GENÉRICA. CONSULTÁ POR LAS COBERTURAS,
+            SUS LÍMITES Y CONDICIONES DE SUSCRIPCIÓN EN WWW.EMPRESAGENERICA.COM
+            EMPRESA GENÉRICA. CALLE FALSA 123, SPRINGIELD MASSACHUSETTS, CUIT
+            22-555555555-2 SUPERINTENDENCIA DE SEGUROS DE LA NACIÓN
+            WWW.SSN.GOB.AR -0800-666-8400 - N° DE INSCRIPCIÓN SSN: 123
           </p>
         </container>
       </main>
@@ -295,9 +289,9 @@
         </container>
         <container class="container-middle">
           <p>
-            La compañia de seguros dispone de un Servicio de Atención al asegurado
-            que atenderá las consultas y reclamos que presenten los tomadores de
-            seguros, asegurados, beneficiarios y/o derechohabientes
+            La compañia de seguros dispone de un Servicio de Atención al
+            asegurado que atenderá las consultas y reclamos que presenten los
+            tomadores de seguros, asegurados, beneficiarios y/o derechohabientes
           </p>
           <p>
             En caso de que el reclamo no haya sido resuelto o que haya sido
@@ -339,11 +333,13 @@
       </footer>
     </div>
     <container class="card-middle card popup" id="popup">
-      <div class="cost middle-cost">
-        <button class="close" onclick="closePopup()">X</button>
-        <p class="big-text"><b>$24739</b><a class="medium-text">/MES</a></p>
-        <p class="medium-text">TERCEROS</p>
-        <p class="small-text">Completo</p>
+      <div class="cost-popup middle-cost-popup">
+        <container class="popup-text">
+          <p class="big-text">$24739<a class="medium-text">/MES</a></p>
+          <p class="small-text">TERCEROS</p>
+          <p class="small-text">Completo</p>
+        </container>
+        <button class="close medium-text" onclick="closePopup()">X</button>
       </div>
       <div class="cost-triangle-popup"></div>
       <div class="coverage-scope-popup">
@@ -389,8 +385,8 @@
         </div>
       </div>
       <p class="small-text legend">21731-.</p>
-      <div class="coverage-buttons">
-        <a href="car-3.html"><button class="buy">COMPRAR</button></a>
+      <div class="coverage-buttons-popup">
+        <a href="car-3.html"><button class="buy-popup">COMPRAR</button></a>
       </div>
     </container>
     <script>

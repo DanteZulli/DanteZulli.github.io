@@ -9,8 +9,8 @@ main {
 }
 /********** VARIABLES **********/
 :root {
-  --blue: #203e7c;
-  --white: #f2f2f2;
+  --blue: #203d7c;
+  --white: #ffffff;
   --gray-for-text: #8490a1;
   --blue-gray-for-text: #556b89;
   --canela: #cabcb6;
@@ -22,16 +22,17 @@ main {
 .top-nav {
   background-color: var(--blue);
   display: flex;
-  padding: 7px;
+  padding: 5px;
   justify-content: space-between;
 }
 .company-logo {
   height: 40px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .contact-number {
   color: var(--white);
   margin-right: 20px;
+  font-weight: 500;
 }
 
 .container-right {
@@ -54,24 +55,24 @@ footer {
   padding: 20px;
 }
 .container-middle p {
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 8px;
+  font-weight: 600;
   color: var(--gray-for-text);
 }
 .container-top {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
-  margin: 15px;
-  margin-bottom: 0px;
+  margin: 20px 50px 0px 50px;
   align-items: center;
   gap: 0.7rem;
 }
 .container-top p {
   text-align: center;
-  font-size: 13px;
+  font-size: 10px;
+  font-weight: 500;
   color: var(--gray-for-text);
 }
+
 .container-bottom {
   display: flex;
   justify-content: space-between;
@@ -88,7 +89,7 @@ footer {
   gap: 20px;
 }
 .logo-ssn {
-  height: 30px;
+  height: 25px;
 }
 
 .separator {
