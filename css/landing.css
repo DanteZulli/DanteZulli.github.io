@@ -55,3 +55,20 @@ main {
   margin-right: 10px;
   text-align: left;
 }
+
+/******************MEDIA QUERYS*************************/
+@media screen and (max-width: 800px) {
+  .button-cotizacion {
+    width: 80%;
+    height: 45px;
+  }
+  .container-menu {
+    width: 310px;
+    height: 350px;
+    gap: 5px;
+  }
+  .container-menu p {
+    font-size: 30px;
+    line-height: 27px;
+  }
+}

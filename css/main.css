@@ -51,7 +51,7 @@ footer {
 .container-middle {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
   padding: 20px;
 }
 .container-middle p {
@@ -105,13 +105,89 @@ footer {
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  
 }
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 8px;
-  
 }
 ::-webkit-scrollbar-thumb:hover {
   background: black;
+}
+
+/******************MEDIA QUERYS*************************/
+@media screen and (max-width: 800px) {
+  /*****HEADER*****/
+  .top-nav {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-number {
+    display: none;
+  }
+  /****FOOTER*****/
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  .container-middle p {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-for-text);
+  }
+  .container-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .container-top p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-for-text);
+  }
+
+  .container-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+  }
+  .container-bottom-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+  }
+  .container-bottom-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+  }
+  .container-bottom-right > .separator {
+    visibility: hidden;
+  }
+  .container-bottom-left > .company-logo {
+    display: none;
+  }
+  .company-logo {
+    width: 80px;
+    height: auto;
+    margin: 0px;
+  }
 }
