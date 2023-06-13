@@ -36,14 +36,32 @@
 .resume-title {
   font-weight: 600;
 }
-
+.resume-card-mobile {
+  display: none;
+}
 .fa-car,
 .check {
   font-size: 30px;
   color: var(--blue);
 }
+.fa-plus,
+.fa-minus {
+  display: none;
+  font-size: 20px;
+  color: #a6a7a8;
+}
+.fa-arrow-left,
+.fa-arrow-right {
+  color: var(--blue);
+  font-size: 30px;
+  padding: 10px;
+  display: none;
+}
 
 /**************COST CARDS****************/
+.cards-mobile {
+  display: none;
+}
 .red-line {
   position: relative;
 }
@@ -211,18 +229,26 @@ li .fa-circle-info {
   color: var(--gray);
 }
 
+.contact-number-cards {
+  color: var(--blue);
+  font-weight: 700px;
+  font-size: 20px;
+  align-self: center;
+  display: none;
+}
+
 /*****************POPUP**********************/
 #blur.active {
   pointer-events: none;
   visibility: visible;
 }
-.blur{
-  position:fixed;
-  z-index:999;
-  width:100%;
-  height:100%;
+.blur {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
   background-color: black;
-  background-color:rgba(0,0,0,.40);
+  background-color: rgba(0, 0, 0, 0.4);
   visibility: hidden;
 }
 .popup {
@@ -299,10 +325,13 @@ li .fa-circle-info {
   background-color: var(--green);
   color: var(--white);
 }
+.popup-text-mobile {
+  display: none;
+}
 .close {
   position: absolute;
   top: 0;
-  right: 0;  
+  right: 0;
   margin: 10px;
 }
 .coverage-buttons-popup {
@@ -341,4 +370,127 @@ li .fa-circle-info {
 .big-text {
   font-size: 30px;
   font-weight: 600;
+}
+
+/******************MEDIA QUERYS*************************/
+@media screen and (max-width: 800px) {
+  /*** RESUME CARD********/
+  .resume-card-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .fa-plus {
+    display: flex;
+  }
+  .resume-card {
+    display: none;
+  }
+  /***********COST CARDS**************/
+  .cards {
+    display: none;
+  }
+  .card {
+    width: 300px;
+  }
+  .fa-arrow-left,
+  .fa-arrow-right {
+    display: flex;
+  }
+  .cost-triangle,
+  .cost-triangle-middle{
+    border-width: 15px 135px 0 135px;
+  }
+  .coverage-scope,
+  .coverage-scope-middle {
+    padding: 10px;
+  }
+  .coverage-list,
+  .coverage-list-middle {
+    margin-left: -10px;
+  }
+  .card-hidden {
+    display: flex;
+  }
+  /**********SLIDER**************/
+  .cards-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-right,
+  .card-left {
+    border: 2px var(--blue) solid;
+  }
+
+  #overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+  }
+  .overlay_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    font-size: 10vw;
+    font-weight: bold;
+    color: var(--blue);
+    background-color: #ebebeb;
+    top: 55%;
+    pointer-events: auto;
+  }
+  #left_button {
+    left: 2.5%;
+  }
+  #right_button {
+    right: 2.5%;
+  }
+  .card {
+    display: none;
+  }
+  .card.card-visible {
+    display: block;
+    max-width: 270px;
+  }
+  .coverage-list-middle {
+    overflow-y: hidden;
+  }
+  /*** BUTTONS ***/
+  .cotizacion {
+    display: none;
+  }
+  .contact-number-cards {
+    display: flex;
+  }
+  /*********POPUP***************/
+  .card.popup {
+    display: block;
+  }
+  .cost-triangle-popup {
+    border-width: 15px 150px 0 150px;
+  }
+  .popup-text > .small-text{
+    display: none;
+  }
+  .popup-text-mobile {
+    display: block;
+    font-size: 13px;
+  }
 }

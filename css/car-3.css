@@ -17,7 +17,7 @@
   padding-bottom: 15px;
   font-size: 11px;
   font-weight: 400;
-  height: 70px;
+  min-height: 70px;
   width: 400px;
 }
 .resume-title {
@@ -113,6 +113,9 @@
 .cel-insp > .mailbox {
   width: 100%;
 }
+.cel-insp-mobile {
+  display: none;
+}
 
 .legend-text {
   grid-column: 1;
@@ -133,4 +136,74 @@
   padding-left: 100px;
   padding-right: 100px;
   width: auto;
+}
+
+@media screen and (max-width: 800px) {
+  /*** RESUME CARD********/
+  .resume-card-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .fa-plus {
+    display: flex;
+  }
+  .resume-card {
+    display: none;
+  }
+  /**********FORM********************/
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box {
+    grid-column: 1;
+  }
+  .zipcode {
+    grid-row: 15;
+  }
+  .district { 
+    grid-row:17;
+  }
+  .polytics {
+    grid-row: 13;
+  }
+  .cel-insp {
+    display: none;
+  }
+  .cel-insp-mobile {
+    display: flex;
+  }
+  .legend-text {
+    display: none;
+  }
+  .form-buttons {
+    display: none;
+  }
+  .form-buttons-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #ebebeb;
+    padding: 20px;
+    padding-top: 0;
+  }
+  .bottom-button-mobile {
+    background-color: #a6a7a9;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: auto;
+    border: none;
+    border-radius: 10px;
+  }
 }

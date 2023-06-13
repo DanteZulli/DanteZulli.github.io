@@ -45,3 +45,17 @@ body {
   margin-bottom: 15px;
   margin-top: 15px;
 }
+/***************MEDIA QUERYS*******************/
+@media screen and (max-width: 800px) {
+  .confirmation-header {
+    padding: 20px;
+    width: 320px;
+  }
+  .confirmation-header > p {
+    display: none;
+  }
+  .confirmation-header > h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
