@@ -407,7 +407,7 @@ li .fa-circle-info {
     display: flex;
   }
   .cost-triangle,
-  .cost-triangle-middle{
+  .cost-triangle-middle {
     border-width: 15px 135px 0 135px;
   }
   .coverage-scope,
@@ -479,6 +479,13 @@ li .fa-circle-info {
   .contact-number-cards {
     display: flex;
   }
+  /*****************BOTTOM BUTTONS*********************/
+  .back span {
+    display: none;
+  }
+  .back::after {
+    content: "VOLVER";
+  }
   /*********POPUP***************/
   .card.popup {
     display: block;
@@ -486,7 +493,7 @@ li .fa-circle-info {
   .cost-triangle-popup {
     border-width: 15px 150px 0 150px;
   }
-  .popup-text > .small-text{
+  .popup-text > .small-text {
     display: none;
   }
   .popup-text-mobile {

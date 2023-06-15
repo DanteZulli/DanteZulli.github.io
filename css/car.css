@@ -258,21 +258,39 @@
     padding-bottom: 0px;
   }
   .progress-circles {
-    padding: 15px;
+    padding: 10px;
     padding-bottom: 0px;
-    margin-bottom: 7px;
+    align-items:baseline;
   }
   .circle,
   .circle-active {
     width: 40px;
     height: 40px;
     font-size: 20px;
+    border: none;
+    margin-bottom: 5px;
   }
+
   .container-circle > p {
     display: none;
   }
   .container-circle-active > p {
     display: none;
+  }
+  .container-circle-active,.container-circle {
+    margin: 0px;
+    padding: 0px;
+    justify-content: baseline;
+    align-items: baseline;
+    align-content: baseline;
+  }
+  .dotted-line {
+    color: #fff;
+    background-color: #ffffff;
+    max-width: 30px;
+    margin: 0px;
+    padding-bottom: 5px;
+    border-top: 4px dotted #e5e5e5;
   }
   /*************BANNERS Y TERMS*****/
   .banners {
@@ -361,7 +379,8 @@
   }
   .captcha-image {
     width: 300px;
-    align-self: center;
+    align-self: flex-start;
+    margin-left: 15px;
   }
   .bottom-text-2 {
     display: none;

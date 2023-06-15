@@ -117,6 +117,10 @@
   display: none;
 }
 
+.cel-mobile, .tel-mobile {
+  display: none;
+}
+
 .legend-text {
   grid-column: 1;
   font-size: 11px;
@@ -137,7 +141,7 @@
   padding-right: 100px;
   width: auto;
 }
-.bottom-button-mobile {
+.form-buttons-mobile {
   display: none;
 }
 
@@ -186,7 +190,7 @@
   .cel-insp-mobile {
     display: flex;
   }
-  .legend-text {
+  .legend-bottom {
     display: none;
   }
   .form-buttons {
@@ -203,10 +207,35 @@
   }
   .bottom-button-mobile {
     background-color: #a6a7a9;
-    padding-left: 40px;
-    padding-right: 40px;
     width: auto;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+  }
+  .cel,.tel {
+    display: none;
+  }
+  .cel-mobile, .tel-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .cel-mobile> input.c-area {
+    width: 30%;
+  }
+  .tel-mobile > input.c-area {
+    width: 30%;
+  }
+  .fa-angle-left,.fa-angle-right {
+    font-size: 40px;
+    padding: 5px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .fa-angle-left {
+    color: white;
+  }
+  .fa-angle-right {
+    color: var(--blue);
   }
 }

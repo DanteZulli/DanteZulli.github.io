@@ -136,7 +136,7 @@
                 </ul>
               </div>
               <div class="coverage-buttons">
-                <button class="more">VER MÁS</button>
+                <button class="more" onclick="openPopup()">Detalle de Cobertura</button>
                 <a href="car-3.html"><button class="buy">COMPRAR</button></a>
               </div>
             </container>
@@ -203,7 +203,7 @@
                 </ul>
               </div>
               <div class="coverage-buttons">
-                <button class="more" onclick="openPopup()">VER MÁS</button>
+                <button class="more" onclick="openPopup()">Detalle de Cobertura</button>
                 <a href="car-3.html"><button class="buy">COMPRAR</button></a>
               </div>
             </container>
@@ -240,7 +240,7 @@
                 </ul>
               </div>
               <div class="coverage-buttons">
-                <button class="more">VER MÁS</button>
+                <button class="more" onclick="openPopup()">Detalle de Cobertura</button>
                 <a href="car-3.html"><button class="buy">COMPRAR</button></a>
               </div>
             </container>
@@ -401,11 +401,11 @@
             </container>
           </container>
           <containter class="bottom-buttons">
-            <button class="bottom-button" onclick="history.back()">
-              ANTERIOR
+            <button class="bottom-button back" onclick="history.back()">
+              <span>ANTERIOR</span>
             </button>
             <button class="bottom-button cotizacion">COTIZACIÓN PDF</button>
-            <button class="bottom-button">CONTACTAME</button>
+            <a href="#footer"><button class="bottom-button">CONTACTAME</button></a>
           </containter>
           <p class="contact-number-cards">0810 222 2444</p>
         </container>
@@ -424,7 +424,7 @@
           </p>
         </container>
       </main>
-      <footer>
+      <footer id="footer">
         <container class="container-top">
           <container class="item">
             <p>N° de inscripción en SSN</p>
